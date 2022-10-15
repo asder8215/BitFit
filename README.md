@@ -44,6 +44,8 @@ GIF created with Ezgif
 
 Describe any challenges encountered while building the app.
 
+Two major challenges I had was dealing with passing the result data from the second activity to the main activity. The other challenge I had was storing that data to the database and making sure that it persists after I reload the app.
+
 ## License
 
     Copyright [2022] [Mahdi Ali-Raihan]
