@@ -3,51 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="261dp"
+        android:layout_width="219dp"
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/entry"
         app:layout_constraintEnd_toStartOf="@+id/date"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:text="Title"
-        android:textStyle="bold"/>
+        tools:text="Title" />
 
     <TextView
         android:id="@+id/date"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
+        android:layout_width="109dp"
+        android:layout_height="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/mood"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:text="Date"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        tools:text="Date" />
 
     <TextView
         android:id="@+id/mood"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
+        android:layout_width="107dp"
+        android:layout_height="20dp"
         android:layout_marginBottom="12dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/entry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="Mood"
-        android:textSize="15sp"
-        android:textStyle="bold"/>
+        tools:text="Mood" />
 
     <TextView
         android:id="@+id/entry"

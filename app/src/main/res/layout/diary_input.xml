@@ -23,7 +23,7 @@
         android:layout_height="49dp"
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="316dp"
-        android:hint="hint"
+        android:hint="Type your entry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodInput"
@@ -45,7 +45,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="72dp"
-        android:hint="hint"
+        android:hint="What's your mood"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateInput" />
 
@@ -65,7 +65,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="72dp"
-        android:hint="hint"
+        android:hint="Today's Date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleInput" />
 
@@ -75,7 +75,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="72dp"
-        android:hint="hint"
+        android:hint="Title of Entry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

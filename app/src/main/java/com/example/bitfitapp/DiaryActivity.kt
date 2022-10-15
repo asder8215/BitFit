@@ -30,11 +30,10 @@ class DiaryActivity: AppCompatActivity() {
         val submitBtn = findViewById<Button>(R.id.submitBtn)
 
         submitBtn.setOnClickListener{
+            val diaryEntry = DisplayDiary(titleInput.text.toString(), dateInput.text.toString(),
+                moodInput.text.toString(), entryInput.text.toString())
             val intent = Intent()
-            intent.putExtra("title", titleInput.text.toString())
-            intent.putExtra("date", dateInput.text.toString())
-            intent.putExtra("entry", entryInput.text.toString())
-            intent.putExtra("mood", moodInput.text.toString())
+            intent.putExtra("Diary Item", diaryEntry)
             setResult(Activity.RESULT_OK, intent)
             finish()
         }

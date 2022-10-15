@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private val diaryEntries = mutableListOf<DisplayDiary>()
     private lateinit var diaryRecyclerView: RecyclerView
     private lateinit var binding: ActivityMainBinding
-    private lateinit var diaryItem: DisplayDiary
+//    private lateinit var diaryItem: DisplayDiary
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         diaryRecyclerView.adapter = diaryAdapter
 
 
-        lifecycleScope.launch(IO) {
+        lifecycleScope.launch() {
             (application as DiaryApplication).db.diaryDao().getAll().collect { databaseList ->
                 databaseList.map { entity ->
                     DisplayDiary(
@@ -73,17 +73,11 @@ class MainActivity : AppCompatActivity() {
                 val data = result.data
                 // Get the data passed from EditActivity
                 if (data != null) {
-//                    val editedString = data.extras!!.getString("newString")
-                    val titleItem = data.extras!!.getString("title")
-                    val dateItem = data.extras!!.getString("date")
-                    val entryItem = data.extras!!.getString("entry")
-                    val moodItem = data.extras!!.getString("mood")
-                    diaryItem = DisplayDiary(titleItem, dateItem, entryItem,
-                        moodItem)
-                    val diaryEntity = DiaryEntity(title = titleItem,date = dateItem,
-                        entry = entryItem, mood = moodItem)
+                    val diaryItem = data.getSerializableExtra("Diary Item") as DisplayDiary
+                    val diaryEntity = DiaryEntity(title = diaryItem.title, date = diaryItem.date,
+                    entry = diaryItem.entry, mood = diaryItem.mood)
                     diaryEntries.add(diaryItem)
-                    lifecycleScope.launch() {
+                    lifecycleScope.launch(IO) {
                         (application as DiaryApplication).db.diaryDao().insert(diaryEntity)
                     }
                 }

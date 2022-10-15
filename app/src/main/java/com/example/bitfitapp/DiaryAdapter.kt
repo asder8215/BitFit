@@ -34,8 +34,8 @@ class DiaryAdapter (private val context: Context, private val diaries: List<Disp
         fun bind(diary: DisplayDiary) {
             title.text = diary.title
             date.text = diary.date
-            mood.text = diary.mood
             entry.text = diary.entry
+            mood.text = diary.mood
         }
 
     }
